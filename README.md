@@ -1,4 +1,4 @@
-#COM1321PROJECT
+COM1321PROJECT
 
 #Description
 A project based on helping an individual make informed financial decision based on their form of income.
