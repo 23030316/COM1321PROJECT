@@ -16,6 +16,7 @@ public class Budgetting {
      * @param args the command line arguments
      */
 public static void main(String[] args) {
+    //leave or not the variable for deciding to continue should the user mistakenly makes an error
     int leaveOrNot;
     boolean decision = true;
     //array list
@@ -24,7 +25,7 @@ public static void main(String[] args) {
     Scanner entry = new Scanner(System.in);
     //input class object
      Input inputHandler = new Input();
-    //while loop to work with exeption statementrys to repeat a process
+    //while loop to work with exeption statements to repeat a process
     while (decision) {
     //the sorting class to sort in descending
     Sort elements = new Sort();
@@ -59,7 +60,7 @@ public static void main(String[] args) {
         System.out.printf("Available money after deductions(excl vehicle purchase): R"+"%.2f",AvailableMoney);
         System.out.println("");
         car.showCars();
-        if( AvailableMoney > 0 && AvailableMoney < 8000){
+        if( AvailableMoney > 0 && AvailableMoney < 5000){
         System.out.println("\t\nSorry, it seems that you can't choose any of the options above.\n");
         elements.Display(all_Expenses);
         leaveOrNot = inputHandler.work_AgainB(entry);
@@ -71,7 +72,7 @@ public static void main(String[] args) {
         break;
         }
         }
-        else if(AvailableMoney >= 8000){//monthly money can determine cars you can purchase...
+        else if(AvailableMoney >= 5000){//monthly money can determine cars you can purchase...
         int carChoice = car.ifCar();
         if(carChoice == 1){
         car.setUserDaTa();//input method from car class
@@ -148,7 +149,7 @@ public static void main(String[] args) {
         System.out.println("");
         
         car.showCars();
-        if( AvailableMoney > 0 && AvailableMoney < 8000){
+        if( AvailableMoney > 0 && AvailableMoney < 5000){
         System.out.println("\t\nIt seems that you can't choose any of the options above.\n");
         elements.Display(all_Expenses);
         leaveOrNot = inputHandler.work_AgainB(entry);
@@ -160,7 +161,7 @@ public static void main(String[] args) {
         break;
         }
         }
-        else if(AvailableMoney >8000){
+        else if(AvailableMoney >5000){
         int carChoice = car.ifCar();
         if(carChoice == 1){
         car.setUserDaTa();
@@ -213,7 +214,7 @@ public static void main(String[] args) {
         entry.nextLine();//returning the input of leaveOrNot
         leaveOrNot = inputHandler.work_AgainA(entry);
         if(leaveOrNot == 1){
-        all_Expenses.clear();// clearing gthe List for the exception caught
+        all_Expenses.clear();// clearing the List for the exception caught
         }
         else if (leaveOrNot == 2) {
         System.out.println("Thank you for working with us...");
