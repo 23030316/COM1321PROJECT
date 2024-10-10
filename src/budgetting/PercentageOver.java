@@ -11,7 +11,7 @@ package budgetting;
  */
 public class PercentageOver implements Percentile{
     private String over75(){
-        String message = "\nPlease note that you cannot get a car loan.\n";
+        String message = "\nWARNING: Note that Your expenses exceed 75% of your gross income...\n";
         return message;
     }
     @Override
