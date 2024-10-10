@@ -11,7 +11,7 @@ package budgetting;
  */
 public class PercentageUnder implements Percentile{
     private String under75(){
-        String message = "\nPlease note that you can get a car loan.\n";
+        String message = "\nNote that your expenses are below 75% of your expenses\nthus your budget plan is on the right track.\n";
         return message;
     }
     @Override
